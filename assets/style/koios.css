@@ -11,6 +11,7 @@
   src: url("../fonts/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-muw.woff2")
     format("woff2");
 }
+
 html,
 body,
 div,
@@ -99,6 +100,7 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -113,11 +115,13 @@ nav,
 section {
   display: block;
 }
+
 body {
   height: 100%;
   padding: 0;
   background-color: #1a1a1a;
   font-family: "Open Sans";
+  box-sizing: border-box;
 }
 
 @media screen and (min-width: 1200px) {
@@ -131,14 +135,17 @@ body {
     font-size: 13px;
   }
 }
+
 ol,
 ul {
   list-style: none;
 }
+
 blockquote,
 q {
   quotes: none;
 }
+
 blockquote:before,
 blockquote:after,
 q:before,
@@ -146,14 +153,17 @@ q:after {
   content: "";
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
 .container {
   max-width: 80%;
   margin: 0 auto;
 }
+
 .flex-center {
   display: flex;
   align-items: center;
@@ -182,10 +192,37 @@ table {
   height: 100vh;
 }
 
+.section-header {
+  text-align: center;
+  line-height: 1.5;
+  margin: 24px 16px;
+}
+
+.section-header h3 {
+  font-size: 48px;
+  color: #ffbf00;
+  font-family: "Allerta Stencil";
+}
+
+.section-header p {
+  font-size: 20px;
+  color: #98a2b3;
+}
+
 /* Header Section */
 header {
-  padding: 24px 160px;
   background: #1a1a1ac7;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.menu {
+  width: 80%;
+  margin: 0 auto;
+  padding: 24px 0;
 }
 
 .logo-box {
@@ -193,6 +230,7 @@ header {
   cursor: pointer;
   font-family: "Open Sans";
 }
+
 .logo-box .logo-context {
   margin-left: 8px;
 }
@@ -218,12 +256,15 @@ header {
 /* Hero Section */
 
 .hero-section {
+  width: 100%;
+  height: 100vh;
   background: radial-gradient(
     50% 50% at 50% 50%,
     #1a1a1a 0%,
     rgba(26, 26, 26, 0) 100%
   );
 }
+
 .center-section {
   position: absolute;
   left: 50%;
@@ -233,12 +274,14 @@ header {
   align-items: center;
   flex-direction: column;
 }
+
 .sub-title {
   color: #d0d5dd;
   font-size: 18px;
   font-family: "Open Sans";
   margin-bottom: 32px;
 }
+
 .main-title {
   font-family: "Allerta Stencil";
   text-transform: capitalize;
@@ -264,10 +307,185 @@ header {
   display: flex;
   align-items: center;
   margin-top: 40px;
-  border-image-source: radial-gradient(109.52% 109.52% at 50% 50%, #FFBF00 0%, rgba(255, 191, 0, 0) 100%);
-
-
+  cursor: pointer;
 }
+
 .main-cta img {
   margin-left: 8px;
+}
+
+/* Our Pride */
+
+.our-pride {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 48px 0;
+}
+
+.card-item {
+  flex: 1;
+  text-align: center;
+}
+
+/* Why us */
+
+.why-us {
+  border: 1px solid #000;
+  border-radius: 5px;
+  /* background: radial-gradient(
+    66.83% 137.09% at 50% 0%,
+    #ffbf00 -100%,
+    rgba(0, 0, 0, 0) 85.03%
+  ); */
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.spotlight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  border: 1px solid;
+  opacity: 25%;
+  height: 150px;
+  border-image-source: linear-gradient(
+    259.61deg,
+    rgba(202, 255, 51, 0.1) -0.88%,
+    rgba(38, 38, 38, 0) 16.28%,
+    rgba(38, 38, 38, 0) 68.6%,
+    rgba(38, 38, 38, 0.8) 100%
+  );
+  background: radial-gradient(
+      66.83% 137.09% at 50% 0%,
+      #ffbf00 0%,
+      rgba(0, 0, 0, 0) 83.03%
+    ),
+    radial-gradient(
+      19.33% 533.21% at 50% 0%,
+      #ffbf00 0%,
+      rgba(255, 191, 0, 0) 100%
+    );
+}
+
+.why-us-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2%;
+}
+
+.feature-card {
+  cursor: pointer;
+  width: 20%;
+  padding: 16px;
+  margin: 10px 0;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  background: linear-gradient(
+      267.5deg,
+      #1c1c1c 40.67%,
+      rgba(28, 28, 28, 0) 99.81%
+    ),
+    linear-gradient(
+      259.61deg,
+      rgba(202, 255, 51, 0.1) -0.88%,
+      rgba(38, 38, 38, 0) 16.28%,
+      rgba(38, 38, 38, 0) 68.6%,
+      rgba(38, 38, 38, 0.8) 100%
+    ),
+    linear-gradient(
+      106.06deg,
+      rgba(255, 191, 0, 0.05) -29.45%,
+      rgba(255, 191, 0, 0) 27.86%
+    );
+}
+
+.feature-shape {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+      180deg,
+      rgba(255, 191, 0, 0.2) -173.65%,
+      rgba(255, 191, 0, 0) 87.22%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(255, 191, 0, 0.1) -66.22%,
+      rgba(255, 191, 0, 0) 85.46%
+    );
+}
+
+.feature-shape::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+      180deg,
+      rgba(255, 191, 0, 0.2) -173.65%,
+      rgba(255, 191, 0, 0) 87.22%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(255, 191, 0, 0.1) -66.22%,
+      rgba(255, 191, 0, 0) 85.46%
+    );
+}
+
+.feature-shape img {
+  width: 50%;
+}
+
+.feature-title h4 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  margin: 16px 0;
+}
+
+.feature-desc p {
+  color: #b3b3b3;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Our Service */
+
+.our-service {
+  background-image: url("../svg/Turn on.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.custom-space {
+  padding-top: 340px;
+  margin-bottom: 32px;
+}
+.service-container {
+  margin-top: 48px;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-side,
+.left-side {
+  flex: 1 45%;
 }
